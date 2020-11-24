@@ -1,4 +1,4 @@
-package fbuni;
+package pacote;
 
 import java.awt.Graphics;
 import java.awt.Rectangle;
@@ -9,18 +9,22 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 //ESTA CLASSE DEVE SE OBRIGATORIAMENTE MANTIDA NO PROJETO. QUALQUER ALTERAÇÃO REALIZADA DEVE OBEDECER A HIERARQUIA.
-public class Desenho {
+public class Fundo {
 	
 	private int x;
 	private int y;
 	private BufferedImage img;
 	private Rectangle rectangle;
 	
-	public Desenho() {
+	
+	
+	public Fundo() {
 		rectangle = new Rectangle();		
+		
+		
 	}
 	
-	public Desenho(int x, int y, String path) {
+	public Fundo(int x, int y, String path) {
 		this.setImg(path);
 
 		//O retângulo do desenho tem as mesmas dimensões e coordenadas da imagem.
@@ -30,6 +34,8 @@ public class Desenho {
 		
 		this.setX(x);
 		this.setY(y);
+		
+		
 	}
 
 	public int getX() {
@@ -65,13 +71,17 @@ public class Desenho {
 	}
 	
 	public Rectangle getRectangle() {
-		//O atributo rectangle é utilizado para identificar a interseção (toque)
-		//entre duas imagens através do método intersects.
 		return rectangle;
 	}
-
+	
+	
 	public void desenhar(Graphics g) {
 		//Desenhando a imagem na tela
 		g.drawImage(this.getImg(), this.getX(), this.getY(), null);
 	}
+
+	
+
+
+	
 }
