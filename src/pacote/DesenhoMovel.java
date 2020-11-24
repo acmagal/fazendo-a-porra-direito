@@ -1,20 +1,24 @@
-package fbuni;
+package pacote;
 
 //ESTA CLASSE DEVE SE OBRIGATORIAMENTE MANTIDA NO PROJETO. QUALQUER ALTERAÇÃO REALIZADA DEVE OBEDECER A HIERARQUIA
 //ELA DEVE SER UTILIZADA NA HERANÇA DE DESENHOS QUE POSSAM SER MOVIMENTADOS PELO USUÁRIO 
-public class DesenhoMovel extends Desenho {
+public class DesenhoMovel extends Fundo {
 	
 	public DesenhoMovel() {}
 	
 	public DesenhoMovel(int x, int y, String path) {
 		super(x, y, path);
+		
+		
 	}
 	
 	public void moverDireita() {
-		this.setX(this.getX() + 2);
+		this.setX(this.getX() + 25);
 	}
 	
 	public void moverEsquerda() {
-		this.setX(this.getX() - 2);
+		this.setX(this.getX() - 25);
 	}
+	
+	
 }
