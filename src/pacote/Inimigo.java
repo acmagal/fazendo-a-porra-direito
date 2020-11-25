@@ -1,15 +1,21 @@
 package pacote;
+import java.util.Random;
 
-import java.awt.Rectangle;
+
 
 //ESTA CLASSE FOI CRIADA AQUI APENAS COMO EXEMPLO. O ALUNO DEVE SUBSTITUI-LA POR OUTRA CLASSE CONFORME O PROJETO.
+//Aqui substituo a classe apresenta para sempre criar um objeto inimigo que se move randomicamente no mapa.
 public class Inimigo extends DesenhoAnimado {
 	
 	
+
+
 	
 	private int loopStatus = 0;
 	private Thread t = new Thread(this);
-	private Rectangle rectangle3;
+	Random gerador = new Random();
+	
+	
 
 	
 
@@ -18,17 +24,16 @@ public class Inimigo extends DesenhoAnimado {
 	}
 	public Inimigo(int x, int y, String path) {
 		super(x, y, path);
-		rectangle3 = new Rectangle();
-		rectangle3 = new Rectangle();
-		rectangle3.height = this.getImg().getHeight();
-		rectangle3.width = this.getImg().getWidth();
 		
 		this.setX(x);
 		this.setY(y);
 		
 		
+		
 
 		t.start();
+		
+		
 		
 		
 	}
@@ -39,26 +44,32 @@ public class Inimigo extends DesenhoAnimado {
 	@SuppressWarnings("static-access")
 	@Override
 	public void run() {
+		
+		for (int i = 0; i < 100; i++) {
+	        gerador.nextInt(200);
+	    }
+		
 		while(true) {
 			switch(loopStatus) {
 				case 0:
-					this.setX(this.getX() + 100);
+					this.setX(this.getX() + gerador.nextInt(200));
 					break;
 				case 1:
 					this.setY(this.getY() + 200);
 					break;
+				
 				case 2:
-					this.setX(this.getX() - 100);
+					this.setY(this.getY() - 200);
 					break;
 				case 3:
-					this.setY(this.getY() - 200);
+					this.setX(this.getX() - gerador.nextInt(200));
 					break;
 					
 					
 			}
 			
 			try {
-				t.sleep(500);
+				t.sleep(300);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
