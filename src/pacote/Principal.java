@@ -15,6 +15,7 @@ public class Principal extends JFrame implements KeyListener {
 	private Bounce bounce;
 	private Inimigo inimigo;
 	private static final long serialVersionUID = 1L;
+	int contador = 0;
 	
 	
 	
@@ -24,7 +25,7 @@ public class Principal extends JFrame implements KeyListener {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//Desenhando a tela e seus elementos
 		fundo = new Fundo(0,0,"fundo.jpg");
-		bounce = new Bounce(46,340,"bounce.gif");
+		bounce = new Bounce(46,340,"bounce.png");
 		inimigo = new Inimigo(490,100,"inimigo.png");
 		//Adicionando o evento de teclado
 		this.addKeyListener(this);
@@ -80,6 +81,7 @@ public class Principal extends JFrame implements KeyListener {
 		//Especificando o comportamento das teclas
         if (evt.getKeyCode() == KeyEvent.VK_RIGHT){
         	bounce.moverDireita();
+        	
         	repaint();
         }
         else
@@ -88,8 +90,29 @@ public class Principal extends JFrame implements KeyListener {
         	repaint();
         }
         
+        else
+            if (evt.getKeyCode() == KeyEvent.VK_UP){
+            	bounce.moverCima();
+            	repaint();
+            }
+            else
+                if (evt.getKeyCode() == KeyEvent.VK_DOWN){
+                	bounce.moverBaixo();
+                	repaint();
+                }
         
-     }
+        if(bounce.getRectangle().intersects(inimigo.getRectangle())) {
+    		System.out.println("Fim de jogo");
+    		contador ++;
+    	}
+    	if(inimigo.getRectangle().intersects(bounce.getRectangle())){
+    		System.out.println("Fim de jogo");
+    		System.out.println("");
+    		contador ++;
+    		}
+    	}
+    	
+    
 	
 	
 	public void keyReleased(KeyEvent arg0) {}

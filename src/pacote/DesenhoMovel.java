@@ -19,6 +19,16 @@ public class DesenhoMovel extends Fundo {
 	public void moverEsquerda() {
 		this.setX(this.getX() - 25);
 	}
+	public void moverCima() {
+		this.setY(this.getY() - 25);
+	}
+	
+	public void moverBaixo() {
+		this.setY(this.getY() + 25);
+	}
+	
+	
+	
 	
 	
 }

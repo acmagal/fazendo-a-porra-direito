@@ -73,6 +73,8 @@ public class Fundo {
 	
 	
 	public Rectangle getRectangle() {
+		
+		
 		return rectangle;
 	}
 	
@@ -83,7 +85,7 @@ public class Fundo {
 	}
 
 	
-
+	
 
 	
 }

@@ -1,4 +1,6 @@
 package pacote;
+
+
 import java.util.Random;
 
 
@@ -29,8 +31,6 @@ public class Inimigo extends DesenhoAnimado {
 		this.setY(y);
 		
 		
-		
-
 		t.start();
 		
 		
@@ -77,6 +77,9 @@ public class Inimigo extends DesenhoAnimado {
 		
 			loopStatus++;
 			if(loopStatus == 4) loopStatus = 0;
+			
+				
+			
 			
 		}
 	}
