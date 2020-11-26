@@ -2,7 +2,7 @@ package pacote;
 
 //ESTA CLASSE DEVE SE OBRIGATORIAMENTE MANTIDA NO PROJETO. QUALQUER ALTERAÇÃO REALIZADA DEVE OBEDECER A HIERARQUIA
 //ELA DEVE SER UTILIZADA NA HERANÇA DE DESENHOS QUE POSSAM SER MOVIMENTADOS PELO USUÁRIO 
-public class DesenhoMovel extends Fundo {
+public class DesenhoMovel extends Chao {
 	
 	public DesenhoMovel() {}
 	

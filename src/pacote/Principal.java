@@ -11,9 +11,9 @@ import javax.swing.JFrame;
 //ESTA CLASSE DEVE SE OBRIGATORIAMENTE MANTIDA NO PROJETO. QUALQUER ALTERAÇÃO REALIZADA DEVE OBEDECER A HIERARQUIA
 public class Principal extends JFrame implements KeyListener {
 
-	private Fundo fundo;
-	private Bounce bounce;
-	private Inimigo inimigo;
+	private Chao chao;
+	private Barata barata;
+	private Pe pe;
 	private static final long serialVersionUID = 1L;
 	int contador = 0;
 	
@@ -24,9 +24,9 @@ public class Principal extends JFrame implements KeyListener {
 	public Principal() {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//Desenhando a tela e seus elementos
-		fundo = new Fundo(0,0,"fundo.jpg");
-		bounce = new Bounce(46,340,"bounce.png");
-		inimigo = new Inimigo(490,100,"inimigo.png");
+		chao = new Chao(0,0,"chao.jpg");
+		barata = new Barata(46,340,"barata.png");
+		pe = new Pe(490,100,"pe.png");
 		//Adicionando o evento de teclado
 		this.addKeyListener(this);
 		
@@ -66,9 +66,9 @@ public class Principal extends JFrame implements KeyListener {
 	//ESSE É O MÉTODO QUE DEVE SER ADAPTADO AO PROJETO
 	public void renderizarImagens(Graphics g2) {
 		//Desenhando as imagens
-		fundo.desenhar(g2);
-		bounce.desenhar(g2);
-		inimigo.desenhar(g2);
+		chao.desenhar(g2);
+		barata.desenhar(g2);
+		pe.desenhar(g2);
 	}
 	
 	//EVITAR ALTERAR ESSE MÉTODO
@@ -80,32 +80,32 @@ public class Principal extends JFrame implements KeyListener {
 	public void keyPressed(KeyEvent evt) {
 		//Especificando o comportamento das teclas
         if (evt.getKeyCode() == KeyEvent.VK_RIGHT){
-        	bounce.moverDireita();
+        	barata.moverDireita();
         	
         	repaint();
         }
         else
         if (evt.getKeyCode() == KeyEvent.VK_LEFT){
-        	bounce.moverEsquerda();
+        	barata.moverEsquerda();
         	repaint();
         }
         
         else
             if (evt.getKeyCode() == KeyEvent.VK_UP){
-            	bounce.moverCima();
+            	barata.moverCima();
             	repaint();
             }
             else
                 if (evt.getKeyCode() == KeyEvent.VK_DOWN){
-                	bounce.moverBaixo();
+                	barata.moverBaixo();
                 	repaint();
                 }
         
-        if(bounce.getRectangle().intersects(inimigo.getRectangle())) {
+        if(barata.getRectangle().intersects(pe.getRectangle())) {
     		System.out.println("Fim de jogo");
     		contador ++;
     	}
-    	if(inimigo.getRectangle().intersects(bounce.getRectangle())){
+    	if(pe.getRectangle().intersects(barata.getRectangle())){
     		System.out.println("Fim de jogo");
     		System.out.println("");
     		contador ++;

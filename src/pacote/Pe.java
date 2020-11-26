@@ -7,7 +7,7 @@ import java.util.Random;
 
 //ESTA CLASSE FOI CRIADA AQUI APENAS COMO EXEMPLO. O ALUNO DEVE SUBSTITUI-LA POR OUTRA CLASSE CONFORME O PROJETO.
 //Aqui substituo a classe apresenta para sempre criar um objeto inimigo que se move randomicamente no mapa.
-public class Inimigo extends DesenhoAnimado {
+public class Pe extends DesenhoAnimado {
 	
 	
 
@@ -21,10 +21,10 @@ public class Inimigo extends DesenhoAnimado {
 
 	
 
-	public Inimigo() {
+	public Pe() {
 		
 	}
-	public Inimigo(int x, int y, String path) {
+	public Pe(int x, int y, String path) {
 		super(x, y, path);
 		
 		this.setX(x);

@@ -9,7 +9,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 //ESTA CLASSE DEVE SE OBRIGATORIAMENTE MANTIDA NO PROJETO. QUALQUER ALTERAÇÃO REALIZADA DEVE OBEDECER A HIERARQUIA.
-public class Fundo {
+public class Chao {
 	
 	private int x;
 	private int y;
@@ -18,13 +18,13 @@ public class Fundo {
 	
 	
 	
-	public Fundo() {
+	public Chao() {
 		rectangle = new Rectangle();		
 		
 		
 	}
 	
-	public Fundo(int x, int y, String path) {
+	public Chao(int x, int y, String path) {
 		this.setImg(path);
 
 		//O retângulo do desenho tem as mesmas dimensões e coordenadas da imagem.
