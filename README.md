@@ -15,22 +15,17 @@ As demais classes **(Nave e Asteroide)** devem ser substituídas conforme a prop
 
 O tema é de livre escolha do aluno, mas não pode ser uma cópia do arquivo disponibilizado. O objetivo do trabalho não precisa ser mirabolante. Basta obedecer o que o projeto propõe. Em virtude da hierarquia do projeto original, o assunto escolhido pelo aluno deve envolver algo com desenho e movimentação. 
 
-## Hierarquia: 
+## Hierarquia (3,0): 
+o aluno precisa estender a hierarquia apresentada, acrescentando classes de acordo com o projeto escolhido.
 
-O aluno precisa estender a hierarquia apresentada, acrescentando classes de acordo com o projeto escolhido 
+### Thread (2,5): 
+ao utilizar a implementação disponibilizada, o aluno precisa determinar no método run() aquilo que a Thread deve realizar. O método run() deve ser sobrescrito na classe que herdar de DesenhoAnimado e definir o comportamento de alguma animação (a ser realizada pela Thread).
 
-### (3,0) Thread: 
+### Tratamento de Exceção (1,5): 
+o aluno deve escolher pelo menos um momento para utilizar tratamento de exceções criando uma classe que herde de Exception, realizando o lançamento dessa exceção e o tratamento da mesma.
 
-Ao utilizar a implementação disponibilizada, o aluno precisa **determinar no método run()** aquilo que a Thread deve realizar. O método **run() deve ser sobrescrito na classe que herdar de DesenhoAnimado** e definir o comportamento de alguma animação (a ser realizada pela Thread)
+### Arquivo (1,5): 
+o aluno deve escolher informações do projeto a serem salvas e posteriormente lidas de arquivos.
 
-### (2,5) Tratamento de Exceção: 
-
-O aluno deve escolher pelo menos um momento para utilizar tratamento de exceções criando uma classe que herde de Exception, realizando o lançamento dessa exceção e o tratamento da mesma
-
-
-### (1,5). Arquivo: 
-
-O aluno deve escolher informações do projeto a serem salvas e posteriormente lidas de arquivos
-
-### (1,5). Coleções: 
-O aluno deve identificar ou propor situações no projeto nas quais o uso de coleções seja útil (1,5).
+### Coleções (1,5): 
+o aluno deve identificar ou propor situações no projeto nas quais o uso de coleções seja útil.
